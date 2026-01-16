@@ -1,0 +1,45 @@
+.navbar {
+  position: relative;
+}
+
+.burger {
+  width: 45px;
+  height: 40px;
+  padding-top: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  span {
+    display: block;
+    height: 5px;
+    background: #fff;
+    border-radius: 2px;
+  }
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+  a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      background: #eee;
+    }
+  }
+}
+
+.menu.open {
+  display: flex;
+}

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+
+
+*{
+  font-family: 'Comfortaa', sans-serif;
+}
+
+
+.page_name{
+  font-size: 56px;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  padding: 65px 0;
+  height: 100%;
+  font-weight: 400;
+}
+
+.home_page_fio{
+  font-size: 56px;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  text-align: center;  
+  padding: 65px 0;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+
+.container_home{
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+
+
+
+.container{
+  align-items: center;
+  margin: 20px auto;
+  max-width: 1080px;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  display: block;
+  color: #fff;
+}
+
+.home_name{
+  margin-top: 100px;
+  padding-top: 40px;
+  color: #000;
+  justify-content: center;
+  display: flex;
+}
+
+
+.home_about{
+  font-size: 26px;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  text-align: center; 
+  font-weight: 400;
+  padding: 30px 0 30px 0;
+  line-height: 1.2;
+}
+
+.home_about:nth-child(4){
+  font-size: 26px;
+  color: #fff;
+  display: flex;
+  font-weight: 400;
+  padding: 30px 0 130px 0;
+  line-height: 1.2;
+}
+
+.homeLinks{
+  padding-bottom: 20px;
+  gap: 60px;
+  justify-content: space-between;
+  display: flex;
+  text-align: center; 
+  line-height: 1.2;
+}
+
+.home_link{
+  font-size: 26px;
+  color: #fff;
+  font-weight: 400;
+  display: inline-block;
+}
+
+
+
+.home_link:hover{
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #000;
+}
+
+
+
+
+html{
+    box-sizing: border-box ;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+
+body{
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+h1,h2,h3,h4,h5{
+    padding: 0;
+    margin: 0;
+    font-weight: 100;
+    font-size: auto;
+}

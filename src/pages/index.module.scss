@@ -264,12 +264,8 @@ h1,h2,h3,h4,h5{
 }
 
 @media screen and (max-device-width: 450px) {
-  .category_page{
-    font-size: 40px;
-  }
-  .main_card{
-  grid-template-columns: repeat(3, auto);
-  } 
+
+  
   .home_page_fio{
     font-size: 19px;
     padding: 25px 20px;

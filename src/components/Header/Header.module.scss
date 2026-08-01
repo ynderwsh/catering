@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+
+
+
+*{
+  font-family: 'Comfortaa', system-ui;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header{
+  padding: 25px 0;
+  border-bottom: 2px solid #eaeaea;
+  align-items: center;
+  margin: 0px;
+}
+
+
+.container{
+  justify-content: center;
+  display: flex;
+}
+
+
+.headerInner{
+  justify-content: space-between;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.icons_top{
+  height: 45px;
+}
+
+
+.comfortaa{
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300,400,500,600,700;
+  font-style: normal;
+}
+
+
+.menu{
+  max-width: 200px;
+  height: 50px;
+}
+
+
+.logo{
+  font-size: 75px;
+  color: #fff;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+  padding: 30px;
+}
+
+.menu_lis{
+  max-width: 200px;
+  height: 50px;
+}
+
+
+
+
+
+.tovar_image{
+  max-width: 172px;
+  border-radius: 20px;
+} 
+
+.name_tovar{
+  max-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+
+  font-weight: 500;
+}
+
+.buttons{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-top: 10px;
+}
+
+
+@media screen and (max-device-width: 1190px) {
+  .logo{
+  font-size:60px;
+  }
+  .headerInner{
+  gap: 10px;
+  margin-top: 10px;
+  }
+}
+
+@media screen and (max-device-width: 840px) {
+  .logo{
+  font-size:50px;
+  padding: 0 30px;
+  }
+  .headerInner{
+  gap: 10px;
+  margin-top: 10px;
+  }
+}
+
+@media screen and (max-device-width: 300px) {
+  .logo{
+  font-size:25px;
+  padding: 0 1px;
+  }
+  .headerInner{
+  gap: 10px;
+  margin-top: 10px;
+  }
+}
+  

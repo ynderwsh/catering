@@ -25,21 +25,59 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
+  background: 000;
+  background-color: #eee;
   width: 200px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1;
 
-  a {
+  a{
     padding: 10px;
     text-decoration: none;
     color: black;
-
+    border-bottom: 0.5px solid #000;
+    
     &:hover {
-      background: #eee;
+      background: #000;
+      color: #fff;
+      z-index: 1;
     }
   }
 }
 
 .menu.open {
-  display: flex;
+  display: grid;
+  margin-right: 100px;
+}
+
+@media screen and (max-device-width: 500px) {
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 66px;
+    left: -94px;
+    background: #fff;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1;
+    max-width: 140px;
+    font-size: 12px;
+    a{
+    padding: 2px;
+    }
+  }
+
+}
+
+@media screen and (max-device-width: 500px) {
+
+  .burger {
+  width: 35px;
+  height: 30px;
+  gap: 4px;
+  }
+ 
+
 }

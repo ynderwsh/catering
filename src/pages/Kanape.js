@@ -1,20 +1,29 @@
+import React from "react";
+import axios from "axios";
 import Card from "../components/Card";
-import Footer from "../components/Footer";
-import styles from './index.module.scss';
 
-function Kanape() {
+function kanape() {
+  const [items, setItems] = React.useState([]);
+
+  React.useEffect(() => {
+    axios.get("https://your-api/roulets").then(res => {
+      setItems(res.data);
+    });
+  }, []);
+
   return (
-    <div className={styles.ap}>
-
-    <div className={styles.main}>
-           
-    <Card/>
-        
-    </div>
-    <Footer/>
-
+    <div>
+      <h2>Рулеты</h2>
+      {items.map(item => (
+        <Card
+          key={item.id}
+          title={item.title}
+          price={item.price}
+          imageUrl={item.imageUrl}
+        />
+      ))}
     </div>
   );
 }
 
-export default Kanape;
+export default kanape;

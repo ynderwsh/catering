@@ -1,9 +1,5 @@
 import styles from './Footer.module.scss';
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from '../Navbar';
-import Home from '../../pages/Home';
-import About from '../../pages/About';
 
 function Footer(){
     return(

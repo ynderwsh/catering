@@ -1,101 +1,34 @@
 import styles from './Card.module.scss';
 import React from 'react';
 
-function Card(){
-    return(
-    <div className={styles.container}>
-            <div className={styles.page_name}>
-                <div className={styles.h2}>Салат в рулете</div>
-            </div>
-            <div className={styles.container_main}>
-            <div className={styles.container_tovar}>
-                <img className={styles.tovar_image} src="/img/1.jpg" alt="image"/>                
-                    <h4 className={styles.name_tovar}>Салат Мимоза с подкопченой семгой и Салат с баклажанами и курицей</h4>
-                <div clclassNamess={styles.main_grid_description}>
-                        <div className={styles.grid_description}>
-                            <img src="/img/price.svg" alt="weight"/>
-                            <h5>1600 рублей</h5>
-                        </div>
-                        <div className={styles.grid_description}>
-                                <img src="/img/weight.svg" alt="weight"/>
-                                <h5>1000-1200 грамм</h5>
-                        </div>
-                    </div>
-                <div className={styles.buttons}>
-                    <button className={styles.more}>Подробнее</button>
-                </div>   
-            </div>
-            <div className={styles.container_tovar}>
-                <img className={styles.tovar_image} src="/img/2.jpg" alt="image"/>                
-                    <h4 className={styles.name_tovar}>Салат Мимоза с подкопченой семгой и Салат с баклажанами и курицей</h4>
-                <div clclassNamess={styles.main_grid_description}>
-                        <div className={styles.grid_description}>
-                            <img src="/img/price.svg" alt="weight"/>
-                            <h5>1600 рублей</h5>
-                        </div>
-                        <div className={styles.grid_description}>
-                                <img src="/img/weight.svg" alt="weight"/>
-                                <h5>1000-1200 грамм</h5>
-                        </div>
-                    </div>
-                <div className={styles.buttons}>
-                    <button className={styles.more}>Подробнее</button>
-                </div>   
-            </div>
-            <div className={styles.container_tovar}>
-                <img className={styles.tovar_image} src="/img/3.jpg" alt="image"/>                
-                    <h4 className={styles.name_tovar}>Салат Мимоза с подкопченой семгой и Салат с баклажанами и курицей</h4>
-                <div clclassNamess={styles.main_grid_description}>
-                        <div className={styles.grid_description}>
-                            <img src="/img/price.svg" alt="weight"/>
-                            <h5>1600 рублей</h5>
-                        </div>
-                        <div className={styles.grid_description}>
-                                <img src="/img/weight.svg" alt="weight"/>
-                                <h5>1000-1200 грамм</h5>
-                        </div>
-                    </div>
-                <div className={styles.buttons}>
-                    <button className={styles.more}>Подробнее</button>
-                </div>   
-            </div>
-            <div className={styles.container_tovar}>
-                <img className={styles.tovar_image} src="/img/4.jpg" alt="image"/>                
-                    <h4 className={styles.name_tovar}>Салат Мимоза с подкопченой семгой и Салат с баклажанами и курицей</h4>
-                <div clclassNamess={styles.main_grid_description}>
-                        <div className={styles.grid_description}>
-                            <img src="/img/price.svg" alt="weight"/>
-                            <h5>1600 рублей</h5>
-                        </div>
-                        <div className={styles.grid_description}>
-                                <img src="/img/weight.svg" alt="weight"/>
-                                <h5>1000-1200 грамм</h5>
-                        </div>
-                    </div>
-                <div className={styles.buttons}>
-                    <button className={styles.more}>Подробнее</button>
-                </div>   
-            </div>
-            <div className={styles.container_tovar}>
-                <img className={styles.tovar_image} src="/img/5.jpg" alt="image"/>                
-                    <h4 className={styles.name_tovar}>Салат Мимоза с подкопченой семгой и Салат с баклажанами и курицей</h4>
-                <div clclassNamess={styles.main_grid_description}>
-                        <div className={styles.grid_description}>
-                            <img src="/img/price.svg" alt="weight"/>
-                            <h5>1600 рублей</h5>
-                        </div>
-                        <div className={styles.grid_description}>
-                                <img src="/img/weight.svg" alt="weight"/>
-                                <h5>1000-1200 грамм</h5>
-                        </div>
-                    </div>
-                <div className={styles.buttons}>
-                    <button className={styles.more}>Подробнее</button>
-                </div>   
-            </div>
-            
-            </div>
+function Card({ title, imageUrl, onFavorite, price, onPlus }) {
+  const [isAdded, setIsAdded] = React.useState(false);
+
+  const onClickPlus = () => {
+    onPlus({ title, imageUrl, price });
+    setIsAdded(!isAdded);
+  };
+
+  return (
+    <div className={styles.card}>
+     {/* <div className={styles.favorite} onClick={onFavorite}>
+        <img src="/img/heart-disabled.svg" alt="disabled" />
+      </div>*/}
+      <img src={imageUrl} className={styles.tovar_image} alt={title} />
+      <h5 className={styles.name_tovar}>{title}</h5>
+      <div className={`${styles['price-container']}`}>
+        <div>
+          Цена {price} руб.
         </div>
-    )
+        <img
+          className={styles.plus}
+          onClick={onClickPlus}
+          src={isAdded ? '/img/btn-checked.svg' : '/img/btn-removed.svg'}
+          alt="Plus"
+        />
+      </div>
+    </div>
+  );
 }
+
 export default Card;

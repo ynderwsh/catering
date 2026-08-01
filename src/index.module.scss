@@ -1,15 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
-body{
-  background-image: url('./img/background.jpg');
-  background-repeat: no-repeat;
-  background-size:cover;
-  margin: 0;
-  backdrop-filter: blur(29px);
+
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+  z-index: 0
+  ;
+}
+
+.drawer{
+  position: absolute;
+  width: 385px;
+  background: #fff;
+  right: 0;
+  z-index: 8;
+  height: 100%;
+  box-shadow: -10px 4px 24px rgba(0,0,0,0.1);
+  h2{
+    margin: 0;
+  }
 }
 
 
 
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+/* Фон */
+body {
+  background-image: url('./img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* важно */
+}
+
+/* Отдельный слой блюра */
+.blur-layer {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.05);
+  z-index: -1;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('./img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(25px);
+  transform: scale(1.1);
+  z-index: -2;
+}
 
 *{
   font-family: 'Comfortaa', system-ui;
@@ -19,9 +75,10 @@ body{
 
 
 
-
-
-
+.category_page{
+  padding: 20px;
+  font-size: 100px;
+}
 
 
 
@@ -110,13 +167,16 @@ body{
 
 
 
+html, body {
+  height: 100%;      // важно для полной высоты
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
 
-
-
-
-
-
-
+.wrapper {
+  min-height: 100vh;           // растяг
+  background: rgba(255, 255, 255, 0.1); // лёгкий белый слой для эффекта
+}
 
 
 
@@ -239,14 +299,6 @@ ul{
 }
 
 
-body{
-    color: #000;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-}
 
 h1,h2,h3,h4,h5{
     padding: 0;
@@ -254,6 +306,8 @@ h1,h2,h3,h4,h5{
     font-weight: 100;
     font-size: auto;
 }  
+
+
 
 
 

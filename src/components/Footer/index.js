@@ -8,8 +8,7 @@ function Footer(){
             <div className={styles.footer_inner}>
               <h1 className={styles.footer_logo}>Catering</h1>
               <div className={styles.footer_menu_items}>
-                <img className="icons_bottom" src="/img/phone_black.svg" alt="phone"/>
-                
+                             
               </div>
               
             </div>

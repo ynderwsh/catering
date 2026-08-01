@@ -94,10 +94,31 @@
   padding-bottom: 100px;
 }
 
+.phone_button {
+  display: inline-block;
+  padding: 15px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+}
+
 .home_link:hover{
   display: inline-block;
   padding-bottom: 2px;
-  border-bottom: 1px solid #000;
 }
 
 .main_card{
@@ -175,12 +196,44 @@ h1,h2,h3,h4,h5{
   .main_card{
   grid-template-columns: repeat(3, auto);
   } 
+  .home_page_fio{
+    font-size: 30px;
+    padding: 30px 60px;
+  }
+    .home_page_fio:nth-child(2){
+    padding: 30px 30px;
+  }
+  .home_about{
+    font-size: 20px;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    text-align: center; 
+    font-weight: 400;
+    padding: 30px 60px;
+    line-height: 1.2;
+  }
+  .home_about:nth-child(4){
+    font-size: 20px;
+    padding: 30px 60px;
+  }
+    .home_link{
+    font-size: 19px;
+    padding: 15px 0;
+  }
 }
 
 @media screen and (max-device-width: 890px){
   .main_card{
     margin-top: 0px;
     gap: 20px;
+  }
+  .homeLinks{
+  display: grid;
+  gap: 20px;
+  }
+  .home_link{
+    font-size: 22px;
   }
 }
 
@@ -198,6 +251,10 @@ h1,h2,h3,h4,h5{
     font-size: 30px;
     padding: 0px;
   }
+  
+  .home_link{
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-device-width: 500px) {
@@ -206,6 +263,33 @@ h1,h2,h3,h4,h5{
   }
 }
 
+@media screen and (max-device-width: 450px) {
+  .category_page{
+    font-size: 40px;
+  }
+  .main_card{
+  grid-template-columns: repeat(3, auto);
+  } 
+  .home_page_fio{
+    font-size: 19px;
+    padding: 25px 20px;
+  }
+    .home_page_fio:nth-child(2){
+    padding: 10px 30px;
+  }
+  .home_about{
+    font-size: 16px;
+    padding: 25px 20px;
+  }
+  .home_about:nth-child(4){
+    font-size: 19px;
+    padding: 25px 20px;
+  }
+    .home_link{
+    font-size: 18px;
+    padding: 15px 0;
+  }
+}
 
 @media screen and (max-device-width: 390px) {
   .main_card{

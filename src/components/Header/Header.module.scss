@@ -124,7 +124,22 @@
   }
 }
 
-@media screen and (max-device-width: 300px) {
+
+
+@media screen and (max-device-width: 450px) {
+ .logo{
+  font-size:40px;
+  padding: 0 1px;
+  }
+  .headerInner{
+  gap: 10px;
+  margin-top: 10px;
+  }
+}
+  
+
+
+@media screen and (max-device-width: 340px) {
   .logo{
   font-size:25px;
   padding: 0 1px;

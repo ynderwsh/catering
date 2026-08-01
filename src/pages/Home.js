@@ -18,8 +18,8 @@ function Home() {
         <h4 className={styles.home_about}>Работаю в городах: Туймазы, Октябрьский, Шаран</h4>
 
         <div className={styles.homeLinks}>
-          <a className={styles.home_link} href="mailto:ahmetyanovag@bk.ru">Написать на почту:<br/> ahmetyanovag@bk.ru</a>
-          <a className={styles.home_link} href="tel:+79270897864">Позвонить по телефону: <br/>8-927-089-78-64</a>
+          <a className={`${styles.home_link} ${styles.phone_button}`} href="mailto:ahmetyanovag@bk.ru">Написать на почту:<br/> ahmetyanovag@bk.ru</a>
+          <a className={`${styles.home_link} ${styles.phone_button}`} href="tel:+79270897864">Позвонить по телефону: <br/>8-927-089-78-64</a>
         </div>        
         </div>
       

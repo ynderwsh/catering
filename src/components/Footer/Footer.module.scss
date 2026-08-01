@@ -84,3 +84,33 @@ h1,h2,h3,h4,h5{
     font-weight: 100;
     font-size: auto;
 }
+
+
+@media screen and (max-device-width: 1190px) {
+  .footer{
+  margin-top: 0;
+}
+}
+
+@media screen and (max-device-width: 450px) {
+ .footer_logo{
+  font-size:40px;
+  gap: 30px;
+  }
+  .footer_inner{
+  gap: 10px;
+  margin-top: 10px;
+  }
+}
+  
+
+
+@media screen and (max-device-width: 340px) {
+  .footer{
+  padding-top: 20px;
+  }
+  .footer_logo{
+  font-size:30px;
+  }
+}
+  
